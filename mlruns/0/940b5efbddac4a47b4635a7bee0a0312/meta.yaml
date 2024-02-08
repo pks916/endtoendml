@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/code/projects/endtoend/mlruns/0/940b5efbddac4a47b4635a7bee0a0312/artifacts
+end_time: 1707306167805
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 940b5efbddac4a47b4635a7bee0a0312
+run_name: bright-wasp-735
+run_uuid: 940b5efbddac4a47b4635a7bee0a0312
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707306164436
+status: 3
+tags: []
+user_id: priya

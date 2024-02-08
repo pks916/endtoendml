@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/code/projects/endtoend/mlruns/0/69246d117b564e4aa1ed3ddc1d811c1e/artifacts
+end_time: 1707306336816
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 69246d117b564e4aa1ed3ddc1d811c1e
+run_name: nebulous-colt-807
+run_uuid: 69246d117b564e4aa1ed3ddc1d811c1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707306333859
+status: 3
+tags: []
+user_id: priya
