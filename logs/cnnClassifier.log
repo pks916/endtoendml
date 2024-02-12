@@ -1,0 +1,84 @@
+2024-02-11 09:38:59,397 - ERROR - 1728528364 - Error ingesting data: __init__() missing 2 required positional arguments: 'config_file_path' and 'params_file_path'
+2024-02-11 09:39:34,949 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 09:39:34,954 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 09:39:34,956 - ERROR - 3874638006 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 09:42:14,329 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 09:42:14,332 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 09:42:14,333 - ERROR - 3874638006 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 09:42:25,213 - ERROR - 1728528364 - Error ingesting data: __init__() missing 2 required positional arguments: 'config_file_path' and 'params_file_path'
+2024-02-11 12:41:36,348 - ERROR - 1728528364 - Error ingesting data: name 'ConfigurationManager' is not defined
+2024-02-11 12:54:48,391 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 12:54:48,394 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 12:54:48,395 - ERROR - 1728528364 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 12:58:43,243 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 12:58:43,245 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 12:58:43,247 - ERROR - 1728528364 - Error ingesting data: "'ConfigBox' object has no attribute 'root_dir'"
+2024-02-11 12:59:26,389 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 12:59:26,393 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 12:59:26,394 - ERROR - 1728528364 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 13:01:05,540 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 13:01:05,543 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 13:01:05,544 - ERROR - 1728528364 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 13:01:34,984 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 13:01:34,987 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 13:01:34,988 - ERROR - 1728528364 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 13:05:10,379 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 13:05:10,381 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 13:05:10,382 - ERROR - 1728528364 - Error ingesting data: isinstance() argument 2 cannot be a parameterized generic
+2024-02-11 14:58:48,272 - INFO - main - Starting Data Ingestion Stage
+2024-02-11 14:58:48,275 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 14:58:48,276 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 14:58:48,276 - ERROR - main - Subscripted generics cannot be used with class and instance checks
+Traceback (most recent call last):
+  File "E:\code\projects\endtoend\main.py", line 9, in <module>
+    pipeline.main()
+  File "e:\code\projects\endtoend\src\cnnClassifier\pipeline\stage01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "e:\code\projects\endtoend\src\cnnClassifier\config\configuration.py", line 11, in __init__
+    create_directories([self.config.artifacts_root])
+  File "C:\Users\priya\anaconda3\envs\cnncancer\lib\site-packages\ensure\main.py", line 798, in __call__
+    if not isinstance(value, templ):
+  File "C:\Users\priya\anaconda3\envs\cnncancer\lib\typing.py", line 657, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+  File "C:\Users\priya\anaconda3\envs\cnncancer\lib\typing.py", line 660, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+TypeError: Subscripted generics cannot be used with class and instance checks
+2024-02-11 21:41:20,438 - INFO - main - Starting Data Ingestion Stage
+2024-02-11 21:41:20,440 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 21:41:20,440 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 21:41:20,440 - INFO - common - Created directory: artifacts
+2024-02-11 21:41:20,440 - INFO - common - Created directory: artifacts/data_ingestion
+2024-02-11 21:41:20,441 - INFO - data_ingestion - Downloading data from https://drive.google.com/file/d/1K9K2PYnJiSMaWg5u_y8iGidPla-cVMQc/view?usp=sharing to artifacts/data_ingestion
+2024-02-11 21:42:27,492 - INFO - data_ingestion - Data downloaded to artifacts/data_ingestion
+2024-02-11 21:42:28,616 - INFO - main - Completed Data Ingestion Stage
+2024-02-11 22:32:44,309 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 22:32:44,322 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 22:32:44,325 - INFO - common - Created directory: artifacts
+2024-02-11 22:32:44,327 - INFO - common - Created directory: artifacts/prepare_base_model
+2024-02-11 22:33:44,885 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 22:33:44,888 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 22:33:44,891 - INFO - common - Created directory: artifacts
+2024-02-11 22:33:44,893 - INFO - common - Created directory: artifacts/prepare_base_model
+2024-02-11 22:34:55,850 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 22:34:55,853 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 22:34:55,855 - INFO - common - Created directory: artifacts
+2024-02-11 22:34:55,856 - INFO - common - Created directory: artifacts/prepare_base_model
+2024-02-11 22:35:45,977 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 22:35:45,979 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 22:35:45,980 - INFO - common - Created directory: artifacts
+2024-02-11 22:35:45,982 - INFO - common - Created directory: artifacts/prepare_base_model
+2024-02-11 22:35:52,210 - WARNING - saving_utils - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-02-11 22:41:37,751 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 22:41:37,754 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 22:41:37,755 - INFO - common - Created directory: artifacts
+2024-02-11 22:41:37,756 - INFO - common - Created directory: artifacts/prepare_base_model
+2024-02-11 22:41:39,225 - WARNING - saving_utils - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-02-11 22:41:40,002 - WARNING - saving_utils - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-02-11 23:28:57,847 - INFO - main - Starting Data Ingestion Stage
+2024-02-11 23:28:57,849 - INFO - common - Loaded the yaml file from config\config.yaml
+2024-02-11 23:28:57,850 - INFO - common - Loaded the yaml file from params.yaml
+2024-02-11 23:28:57,851 - INFO - common - Created directory: artifacts
+2024-02-11 23:28:57,851 - INFO - common - Created directory: artifacts/prepare_base_model
+2024-02-11 23:28:59,166 - WARNING - saving_utils - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-02-11 23:28:59,628 - WARNING - saving_utils - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-02-11 23:28:59,826 - INFO - main - Completed Data Ingestion Stage
