@@ -50,32 +50,29 @@ class ConfigurationManager:
 
 
     def get_training_config(self) -> TrainingConfig:
-        config = self.config.training
-        prepare_base_model = self.config.prepare_base_model
+        config = self.config
         params = self.params
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, 'Data/train')
-        valid_data = os.path.join(self.config.data_ingestion.unzip_dir, 'Data/valid')
-        create_directories([config.root_dir])
+        training_data = config.data.train 
+        valid_data = config.data.valid
 
         return TrainingConfig(
-            root_dir=Path(config.root_dir),
-            trained_model_path=Path(config.trained_model_path),
-            updated_base_model_path=Path(prepare_base_model.updated_base_model_path),
+            trained_model_path=Path(config.training.trained_model_path),
+            updated_base_model_path=Path(config.prepare_base_model.updated_base_model_path),
             training_data=Path(training_data),
             valid_data=Path(valid_data),
             params_epochs=params.EPOCHS,
             params_batch_size=params.BATCH_SIZE,
-            params_is_augmentated=params.AUGMENTATION,
             params_image_size=params.IMAGE_SIZE
         )
         
 
     def get_evaluation_config(self) -> EvaluationConfig:
+        config = self.config
         
         return EvaluationConfig(
-            path_of_model="artifacts/training/model.h5",
-            training_data="artifacts/data_ingestion/data_ingestion/Data/train",
-            mlflow_uri="https://dagshub.com/pks916/endtoendml.mlflow",
+            model_path=config.training.trained_model_path,
+            testing_data=config.data.test,
+            mlflow_uri=config.mlflow_uri,
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,
             params_batch_size=self.params.BATCH_SIZE

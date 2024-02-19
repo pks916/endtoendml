@@ -1,3 +1,4 @@
+import os
 import tensorflow as tf
 from cnnClassifier.entity.config_entity import TrainingConfig
 from pathlib import Path
@@ -42,6 +43,8 @@ class Training:
 
     @staticmethod
     def save_model(path: Path, model: tf.keras.Model):
+        os.makedirs('model', exist_ok=True)
+        model.save('model/model.h5')
         model.save(path)
     
     def train(self):

@@ -1,4 +1,5 @@
 artifacts_root: artifacts
+mlflow_uri: "https://dagshub.com/pks916/endtoendml.mlflow"
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
@@ -14,3 +15,8 @@ prepare_base_model:
 training:
   root_dir: artifacts/training
   trained_model_path: artifacts/training/model.h5
+
+data:
+  train: artifacts/data_ingestion/Data/train
+  test: artifacts/data_ingestion/Data/test
+  valid: artifacts/data_ingestion/Data/valid
