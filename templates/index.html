@@ -49,16 +49,14 @@
             border-radius: 4px;
         }
         
-        .re-train {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
+        .upload-form img {
+            width: 100%;
+            margin-bottom: 10px;
+            margin: auto;
+            display: block;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
-        
+
         .result-container {
             max-width: 400px;
             margin: 20px auto;
@@ -77,6 +75,8 @@
     <h1>Skin Cancer Diagnosis</h1>
     <div class="upload-form">
         <form id="uploadForm" enctype="multipart/form-data">
+            <h2>Upload Image</h2>
+            <img id="imagePreview" src="#" alt="No image selected" >
             <input type="file" name="file" id="fileInput">
             <button type="submit" id="submitButton">Predict</button>
         </form>
@@ -87,6 +87,18 @@
     </div>
 
     <script>
+        const fileInput = document.getElementById('fileInput');
+        const previewImage = document.getElementById('imagePreview');
+
+        fileInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
         document.getElementById("uploadForm").addEventListener("submit", function (event) {
             event.preventDefault();
             submitForm();

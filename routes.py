@@ -9,7 +9,6 @@ from src.cnnClassifier.pipeline.prediction import Prediction
 
 IMAGE_DIR = "images"
 
-
 app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
@@ -17,6 +16,7 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/")
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
 
 @app.post('/predict')
 async def predict(file: UploadFile = File(...)):
@@ -30,5 +30,7 @@ async def predict(file: UploadFile = File(...)):
     return JSONResponse(prediction)
 
 
+
+
 if __name__ == "__main__":
-    app.run(app, host='0.0.0.0')
+    app.run(app, host='0.0.0.0', port=80)
